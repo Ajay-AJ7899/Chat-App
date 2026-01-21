@@ -1,0 +1,9 @@
+## Frontend
+npm create vite@latest .
+- react 
+- javascript
+
+##backend 
+npm i express@4.21.2 mongoose@6.12.0 cryptjs@2.4.3 jsonwebtoken
+npm i dotenv@16.4.7 cooki-parser@1.4.7 //to get .env files
+
