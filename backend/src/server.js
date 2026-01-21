@@ -25,3 +25,5 @@ if(process.env.NODE_ENV === 'production'){
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
+
+//router is in rotuer page here it is linked using import and then app.use 
