@@ -10,3 +10,4 @@ npm i dotenv@16.4.7 cooki-parser@1.4.7 //to get .env files
 ## Frontend  localhost 5173 backend localhost 3000
 made both to run on same localhost 3000 using //claude
 
+## hosted on render 
