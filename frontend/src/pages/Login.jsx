@@ -1,10 +1,10 @@
 import React from 'react'
 
-function App(){
+function Login(){
   return (
   <div>
     login page
   </div>
 )
 }
-export default login
+export default Login
