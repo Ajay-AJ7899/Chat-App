@@ -1,20 +1,29 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
 
 function SignUp() {
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const dispatch = useDispatch();
+  const { userData } = useSelector((state) => state.user); // ✅ fixed typo and syntax
+
   const handleSignUp = async (e) => {
     e.preventDefault(); // prevent page reload
     try {
       const result = await axios.post(
-        `${serverUrl}/api/auth/signup`,
+        `${process.env.REACT_APP_SERVER_URL}/api/auth/signup`, // ✅ use env variable
         { userName, email, password },
         { withCredentials: true }
       );
-      console.log(result.data); // log response body
+
+      console.log(result.data);
+
+      // ✅ Example: dispatch action to update Redux store
+      dispatch({ type: "SET_USER", payload: result.data });
+
     } catch (error) {
       console.error(error.response?.data || error.message);
     }
